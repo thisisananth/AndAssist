@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="setStartTime">Set Start Time</string>
+    <string name="hello">Hello World!</string>
+    <string name="app_name">MyPA</string>
+    <string name="task_label">Enter Task</string>
+     <string name="time">Enter Time</string>
+     <string name="time_label">Time</string>
+     <string name="save">Save</string>
+     <string name="no_tasks">No Tasks</string>
+      <string name="add_task">Add Task</string>
+</resources>
