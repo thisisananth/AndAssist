@@ -25,10 +25,11 @@ public class AlarmReceiver extends BroadcastReceiver {
 		long when = System.currentTimeMillis();
 	
 		Notification notification = new Notification(icon, tickerText, when);
-		notification.sound = Uri.parse("file:///sdcard/vedam.mp3");
+		//notification.sound = Uri.parse("file:///sdcard/vedam.mp3");
+		notification.defaults |= Notification.DEFAULT_SOUND;
 		//notification.defaults |= Notification.DEFAULT_SOUND;
 		//mNotificationManager.notify(1, notification);
-		
+		notification.flags |= Notification.FLAG_INSISTENT;
 		notification.flags |=  Notification.FLAG_AUTO_CANCEL ;
 		
 		/*notification.ledARGB = 0xff00ff00;

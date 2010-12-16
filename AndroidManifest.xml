@@ -58,6 +58,7 @@
 
 <activity android:label="Settings" android:name="Preferences"></activity>
 </application>
-    <uses-sdk android:minSdkVersion="8" />
+    <uses-sdk android:minSdkVersion="7" android:targetSdkVersion="7"/>
+
 
 </manifest> 

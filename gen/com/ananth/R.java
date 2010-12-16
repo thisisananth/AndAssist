@@ -16,6 +16,7 @@ public final class R {
     public static final class id {
         public static final int TextView02=0x7f070005;
         public static final int add_task=0x7f070007;
+        public static final int deleteAll=0x7f07000a;
         public static final int message=0x7f070004;
         public static final int pickTime=0x7f070002;
         public static final int save=0x7f070003;

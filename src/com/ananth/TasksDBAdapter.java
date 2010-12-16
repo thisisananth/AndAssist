@@ -92,7 +92,10 @@ public boolean deleteTask(long rowId) {
 }
 
 public boolean deleteAllTasks(){
+	
 	return mDb.delete(DATABASE_TABLE, KEY_ROWID + ">"  + 0,null )> 0;
+	
+	
 }
 
 public Cursor fetchAllTasks() {

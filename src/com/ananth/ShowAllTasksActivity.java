@@ -18,6 +18,7 @@ import android.widget.Toast;
 
 public class ShowAllTasksActivity extends ListActivity {
 TasksDBAdapter mDbHelper = null;
+SimpleCursorAdapter tasks =  null;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -70,6 +71,12 @@ TasksDBAdapter mDbHelper = null;
 						"Enter you time settings",
 						Toast.LENGTH_LONG).show();
 				break;
+				
+			case R.id.deleteAll:
+				mDbHelper.deleteAllTasks();
+				
+				fillData();
+				Toast.makeText(ShowAllTasksActivity.this, "All tasks deleted", Toast.LENGTH_LONG).show();
 
 			}
 			return true;
@@ -87,8 +94,8 @@ TasksDBAdapter mDbHelper = null;
 	        int[] to = new int[]{R.id.text1};
 
 	        // Now create a simple cursor adapter and set it to display
-	        SimpleCursorAdapter tasks = 
-	            new SimpleCursorAdapter(this, R.layout.tasks_row, mNotesCursor, from, to);
+	       
+	          tasks =  new SimpleCursorAdapter(this, R.layout.tasks_row, mNotesCursor, from, to);
 	        setListAdapter(tasks);
 	    }
 

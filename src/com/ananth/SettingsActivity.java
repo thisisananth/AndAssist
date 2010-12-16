@@ -35,6 +35,7 @@ public class SettingsActivity extends ListActivity {
 		// Create an array of Strings, that will be put to our ListActivity
 		String[] names = new String[] { "Start Time", "End Time" };
 		// Use your own layout and point the adapter to the UI elements which contains the label
+		
 		this.setListAdapter(new SettingsArrayAdapter(this, names));
 	}
 
@@ -52,6 +53,8 @@ public class SettingsActivity extends ListActivity {
 		
 		String time = editedTime.getText().toString();
 		
+		System.out.println(time + "time");
+		
 		String[] hours=time.split(":");
 		mHour = Integer.parseInt(hours[0]);
 		String[] mins = hours[1].split(" ");
@@ -60,6 +63,7 @@ public class SettingsActivity extends ListActivity {
 		System.out.println(mHour + "" + mMinute);
 		
 		startEndIndicator=position;
+		System.out.println(position);
 		showDialog(TIME_DIALOG_ID);
 		
 	}
@@ -130,7 +134,7 @@ public class SettingsActivity extends ListActivity {
 		        am.set(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), mAlarmSender);
 		        SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
 		        SharedPreferences.Editor editor = settings.edit();
-		        editor.putString("startTime", editedTime.getText().toString());
+		        editor.putString("endTime", editedTime.getText().toString());
 	    	}
 	    	
 	    	
