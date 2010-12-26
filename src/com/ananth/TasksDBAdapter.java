@@ -11,7 +11,11 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
-
+/**
+ * SQLite database adapter for 
+ * @author ananthmajumdar
+ *
+ */
 public class TasksDBAdapter{
 	
 	 public static final String KEY_NAME = "name";
@@ -20,7 +24,7 @@ public class TasksDBAdapter{
 	private static final String DATABASE_NAME = "data";
     private static final String DATABASE_TABLE = "tasks";
     private static final int DATABASE_VERSION = 2;
-    private static final String TAG = "NotesDbAdapter";
+    private static final String TAG = "TasksDbAdapter";
     private TaskDBHelper mDbHelper;
     private SQLiteDatabase mDb;
     private final Context mCtx;

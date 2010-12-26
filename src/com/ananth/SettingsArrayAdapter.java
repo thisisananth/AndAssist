@@ -13,7 +13,11 @@ public class SettingsArrayAdapter extends ArrayAdapter{
 
 	private final Activity context;
 	private final String[] names;
-
+/**
+ * An array adapter class which holds the text and the start or end time. 
+ * @param context
+ * @param names
+ */
 	public SettingsArrayAdapter(Activity context, String[] names) {
 		super(context, R.layout.settings, names);
 		this.context = context;
@@ -24,9 +28,10 @@ public class SettingsArrayAdapter extends ArrayAdapter{
 		View rowView = inflater.inflate(R.layout.settings, null, true);
 		
 		SharedPreferences settings=context.getSharedPreferences(SettingsActivity.PREFS_NAME, 0);
-		String startTime = settings.getString("startTime", "6:30 AM");
-		String endTime = settings.getString("endTime", "10:30 PM");
-		
+		String startTime = settings.getString("startTime", "Click to set time");
+		System.out.println("Start Time is " + startTime);
+		String endTime = settings.getString("endTime", "Click to set time");
+		System.out.println("End Time is "+ endTime);
 		TextView label = (TextView) rowView.findViewById(R.id.message);
 		label.setText(names[position]);
 		label.setGravity(Gravity.LEFT);

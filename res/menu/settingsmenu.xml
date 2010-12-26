@@ -3,4 +3,5 @@
   xmlns:android="http://schemas.android.com/apk/res/android">
 <item android:id="@+id/settings" android:title="Settings"></item>
 <item android:id="@+id/deleteAll" android:title="Delete All Tasks"></item>
+<item android:id="@+id/ringtone" android:title="Ringtone"></item>
 </menu>

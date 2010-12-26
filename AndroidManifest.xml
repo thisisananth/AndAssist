@@ -18,15 +18,7 @@
 </intent-filter>
     
     </receiver>
-<!--  <activity android:launchMode="standard" android:screenOrientation="portrait" android:name="CallerActivity">
-<intent-filter android:icon="@drawable/icon"
-               android:label="My Personal Assistant"
-               android:priority="1" >
-               <action android:name="android.intent.action.MAIN" />
-              <category android:name="android.intent.category.LAUNCHER" />
-    
-</intent-filter>
-</activity> -->
+
 
  <activity android:launchMode="standard" android:screenOrientation="portrait" android:name="SettingsActivity">
 <intent-filter android:icon="@drawable/icon"
@@ -48,15 +40,19 @@
 <activity android:launchMode="standard" android:screenOrientation="portrait" android:name="ShowAllTasksActivity">
 <intent-filter android:icon="@drawable/icon"
                android:label="View Tasks" >
+                <action android:name="com.ananth.VIEW_TASKS" />
                <action android:name="android.intent.action.MAIN" />
               <category android:name="android.intent.category.LAUNCHER" />
+               <category android:name="android.intent.category.DEFAULT" />
     
 </intent-filter>
 </activity>
 
 
 
-<activity android:label="Settings" android:name="Preferences"></activity>
+<activity android:label="Settings" android:name="Preferences">
+
+</activity>
 </application>
     <uses-sdk android:minSdkVersion="7" android:targetSdkVersion="7"/>
 

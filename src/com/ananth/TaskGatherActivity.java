@@ -17,7 +17,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.TimePicker;
-
+/**
+ * This class shows the view to take the tast data, save and schedule an alarm.
+ * @author ananthmajumdar
+ *
+ */
 public class TaskGatherActivity extends Activity  {
 	private PendingIntent mAlarmSender;
 	 private EditText mTaskText;
@@ -80,6 +84,7 @@ public class TaskGatherActivity extends Activity  {
 	            	
 	            	 setResult(RESULT_OK);
 	            	 saveState();
+	            	 mDbHelper.close();
 	            	    finish();
 	            	    
 	            	    

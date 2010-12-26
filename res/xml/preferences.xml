@@ -2,7 +2,11 @@
 <PreferenceScreen
   xmlns:android="http://schemas.android.com/apk/res/android">
 
-<PreferenceCategory android:title="User Settings"><EditTextPreference android:title="Start Time" android:key="startTime" android:summary="Enter the time at which you start ur day"></EditTextPreference>
-<EditTextPreference android:title="End Time" android:summary="Enter the time you end the day" android:key="endTime"></EditTextPreference>
+<PreferenceCategory android:title="Ringtone Settings">
+
+
+
+
+<RingtonePreference android:key="ringtone" android:title="Select A Ringtone" android:selectable="true" android:enabled="true"></RingtonePreference>
 </PreferenceCategory>
 </PreferenceScreen>
