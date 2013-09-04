@@ -23,6 +23,8 @@ import android.widget.Toast;
 public class ShowAllTasksActivity extends ListActivity {
 	TasksDBAdapter mDbHelper = null;
 	SimpleCursorAdapter tasks = null;
+	
+	String test="Ananth";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
